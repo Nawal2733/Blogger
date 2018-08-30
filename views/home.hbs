@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WeatherApp</title>
+    <link href="https://fonts.googleapis.com/css?family=Diplomata+SC" rel="stylesheet">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        #pageHome{
+            background-color: #f39c12;
+        }
+        #header h1{
+            font-size: 20px;
+            letter-spacing: 2px;
+           color: rgb(18, 231, 238);
+        }
+        #main{
+            text-align: center;
+        }
+        #form{
+            position: relative;
+            top: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div data-role="page" id="pageHome" data-theme="b">
+        <div data-role="header" data-theme="b" id="header">
+            <h1>WeatherApp</h1>
+        </div>
+        <div role="main" class="ui-content" data-inset="true" id="main">
+            <h2 style="color:#3498db">{{address}}</h2>
+            <h2 style="color:#9b59b6">{{tem}}</h2>
+            <h2 style="color:rgb(243, 9, 243)">{{temp}}</h2>
+            <h2 style="color:rgb(62, 65, 247);text-transform:capitalize">{{status}}</h2>
+            <form action="/address" method="post" id="form">
+                <input type="text" name="address" required data-theme="a" placeholder="Enter Address">
+                <button type="submit">SEARCH</button>
+            </form>
+        </div>
+    
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#" data-icon="home" class="">HOME</a></li>
+                    <li><a href="#" data-icon="info">ABOUT</a></li>
+                    <li><a href="#" data-icon="mail">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
