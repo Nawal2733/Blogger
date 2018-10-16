@@ -1,0 +1,141 @@
+#page1{
+    width: 100%;
+    min-height: 90vh;
+    padding: 30px 20px;
+    background-color: tomato;
+    animation: colorChange infinite 8s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    transition: 2s linear'
+}
+#nav{
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 5%;
+}
+#logo{
+    font-size: 24px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#content{
+    margin-top: 80px;
+    margin-bottom: 100px;
+    color: rgb(230, 225, 225);
+}
+#content p{
+    font-size: 20px;
+}
+#arrow{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #e67e22;
+    margin: auto;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 0 11px 0px black;
+}
+.line{
+    position: absolute;
+    width: 5px;
+    height: 25px;
+    margin: 8px 25px;
+    background-color: #fff;
+    animation: move infinite 1s;
+}
+#line1{
+    transform: rotate(45deg);
+    margin-left: 33px;
+}
+#line2{
+    transform: rotate(-45deg);
+    margin-left: 18px;
+}
+
+/* page 2 style */
+#page2{
+    width: 100%;
+    min-height: 55vh;
+    padding-bottom: 30px;
+    background-color: #e67e22;
+    color: #fff;
+}
+#page2 .row{
+    padding-top: 70px;
+    margin-left: auto;
+}
+
+/* page 4 */
+#page3{
+    width: 100%;
+    min-height: 55vh;
+    padding-bottom: 30px;
+    background-color: #3b3b3b;
+    color: #fff;
+}
+#page3 .row{
+    padding-top: 70px;
+    margin-left: auto;
+}
+
+/* page 4 */
+#page4{
+    width: 100%;
+    min-height: 55vh;
+    padding-bottom: 30px;
+    background-color: #e74c3c;
+    color: #fff;
+}
+#page4 .row{
+    padding-top: 70px;
+    margin-left: auto;
+}
+
+/* footer */
+#footer{
+    width: 100%;
+    min-height: 55vh;
+    padding-bottom: 30px;
+    background-color: #3b3b3b;
+    color: #fff;
+}
+#footer .row{
+    padding-top: 70px;
+    margin-left: auto;
+}
+
+
+@keyframes colorChange{
+    0%{
+        background-color: #2ecc71;
+    }
+    25%{
+        background-color: #1abc9c;
+    }
+    50%{
+        background-color: #e74c3c;
+    }
+    75%{
+        background-color: #9b59b6;
+    }
+    110%{
+        background-color: #e67e22;
+    }
+}
+@keyframes move{
+    0%{
+        margin-top: 8px;
+    }
+    100%{
+        margin-top: 20px;
+    }
+}
+
+@media(max-width:544px){
+    #content h1{
+        font-size: 24px;
+    }
+    #content p{
+        font-size: 16px;
+    }
+}
